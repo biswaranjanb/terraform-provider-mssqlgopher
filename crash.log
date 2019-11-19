@@ -1,0 +1,863 @@
+2019/11/19 14:58:10 [INFO] Terraform version: 0.12.14 dev 
+2019/11/19 14:58:10 [INFO] Go runtime version: go1.13.3
+2019/11/19 14:58:10 [INFO] CLI args: []string{"D:\\go_workspace\\bin\\terraform.exe", "apply"}
+2019/11/19 14:58:10 [DEBUG] Attempting to open CLI config file: C:\Users\bbehera\AppData\Roaming\terraform.rc
+2019/11/19 14:58:10 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2019/11/19 14:58:10 [DEBUG] checking for credentials in "C:\\Users\\bbehera\\AppData\\Roaming\\terraform.d\\plugins"
+2019/11/19 14:58:10 [DEBUG] checking for credentials in "C:\\Users\\bbehera\\AppData\\Roaming\\terraform.d\\plugins\\windows_amd64"
+2019/11/19 14:58:10 [INFO] CLI command args: []string{"apply"}
+2019/11/19 14:58:10 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2019/11/19 14:58:10 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2019/11/19 14:58:10 [DEBUG] New state was assigned lineage "fb27f3be-4b4a-83b7-d33d-2a9791f8de29"
+2019/11/19 14:58:10 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2019/11/19 14:58:10 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2019/11/19 14:58:10 [DEBUG] checking for provider in "."
+2019/11/19 14:58:10 [WARN] found legacy provider "terraform-provider-csv.exe"
+2019/11/19 14:58:10 [DEBUG] checking for provider in "D:\\go_workspace\\bin"
+2019/11/19 14:58:10 [WARN] found legacy provider "terraform-provider-example"
+2019/11/19 14:58:10 [DEBUG] checking for provider in ".terraform\\plugins\\windows_amd64"
+2019/11/19 14:58:10 [DEBUG] checking for provider in "C:\\Users\\bbehera\\AppData\\Roaming\\terraform.d\\plugins"
+2019/11/19 14:58:10 [DEBUG] checking for provider in "C:\\Users\\bbehera\\AppData\\Roaming\\terraform.d\\plugins\\windows_amd64"
+2019/11/19 14:58:10 [WARN] found legacy provider "terraform-provider-csv.exe"
+2019/11/19 14:58:10 [WARN] found legacy provider "terraform-provider-example.exe"
+2019/11/19 14:58:10 [DEBUG] found provider "terraform-provider-highbond_v0.0.3.exe"
+2019/11/19 14:58:10 [DEBUG] found valid plugin: "csv", "0.0.0", "D:\\go_workspace\\src\\github.com\\terraform-provider-csv\\terraform-provider-csv.exe"
+2019/11/19 14:58:10 [DEBUG] found valid plugin: "example", "0.0.0", "D:\\go_workspace\\bin\\terraform-provider-example"
+2019/11/19 14:58:10 [DEBUG] found valid plugin: "highbond", "0.0.3", "C:\\Users\\bbehera\\AppData\\Roaming\\terraform.d\\plugins\\windows_amd64\\terraform-provider-highbond_v0.0.3.exe"
+2019/11/19 14:58:10 [DEBUG] checking for provisioner in "."
+2019/11/19 14:58:10 [DEBUG] checking for provisioner in "D:\\go_workspace\\bin"
+2019/11/19 14:58:10 [DEBUG] checking for provisioner in ".terraform\\plugins\\windows_amd64"
+2019/11/19 14:58:10 [DEBUG] checking for provisioner in "C:\\Users\\bbehera\\AppData\\Roaming\\terraform.d\\plugins"
+2019/11/19 14:58:10 [DEBUG] checking for provisioner in "C:\\Users\\bbehera\\AppData\\Roaming\\terraform.d\\plugins\\windows_amd64"
+2019/11/19 14:58:10 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2019/11/19 14:58:10 [INFO] backend/local: starting Apply operation
+2019/11/19 14:58:10 [TRACE] backend/local: requesting state manager for workspace "default"
+2019/11/19 14:58:10 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2019/11/19 14:58:10 [TRACE] backend/local: requesting state lock for workspace "default"
+2019/11/19 14:58:10 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2019/11/19 14:58:10 [TRACE] statemgr.Filesystem: existing snapshot has lineage "4832af10-7779-dee0-4680-a630f71a3941" serial 1
+2019/11/19 14:58:10 [TRACE] statemgr.Filesystem: locking terraform.tfstate using LockFileEx
+2019/11/19 14:58:10 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2019/11/19 14:58:10 [TRACE] backend/local: reading remote state for workspace "default"
+2019/11/19 14:58:10 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2019/11/19 14:58:10 [TRACE] statemgr.Filesystem: read snapshot with lineage "4832af10-7779-dee0-4680-a630f71a3941" serial 1
+2019/11/19 14:58:10 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2019/11/19 14:58:10 [TRACE] backend/local: building context for current working directory
+2019/11/19 14:58:10 [TRACE] terraform.NewContext: starting
+2019/11/19 14:58:10 [TRACE] terraform.NewContext: resolving provider version selections
+2019/11/19 14:58:10 [TRACE] terraform.NewContext: loading provider schemas
+2019/11/19 14:58:10 [TRACE] LoadSchemas: retrieving schema for provider type "csv"
+2019-11-19T14:58:10.627+0530 [INFO]  plugin: configuring client automatic mTLS
+2019-11-19T14:58:10.647+0530 [DEBUG] plugin: starting plugin: path=D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe args=[D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe]
+2019-11-19T14:58:10.650+0530 [DEBUG] plugin: plugin started: path=D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe pid=17484
+2019-11-19T14:58:10.650+0530 [DEBUG] plugin: waiting for RPC address: path=D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe
+2019-11-19T14:58:11.258+0530 [INFO]  plugin.terraform-provider-csv.exe: configuring server automatic mTLS: timestamp=2019-11-19T14:58:11.257+0530
+2019-11-19T14:58:11.280+0530 [DEBUG] plugin: using plugin: version=5
+2019-11-19T14:58:11.280+0530 [DEBUG] plugin.terraform-provider-csv.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2019-11-19T14:58:11.279+0530
+2019/11/19 14:58:11 [TRACE] GRPCProvider: GetSchema
+2019/11/19 14:58:11 [TRACE] GRPCProvider: Close
+2019-11-19T14:58:11.335+0530 [DEBUG] plugin: plugin process exited: path=D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe pid=17484
+2019-11-19T14:58:11.335+0530 [DEBUG] plugin: plugin exited
+2019/11/19 14:58:11 [TRACE] terraform.NewContext: complete
+2019/11/19 14:58:11 [TRACE] backend/local: finished building terraform.Context
+2019/11/19 14:58:11 [TRACE] backend/local: requesting interactive input, if necessary
+2019/11/19 14:58:11 [TRACE] Context.Input: Prompting for provider arguments
+2019/11/19 14:58:11 [TRACE] Context.Input: Provider provider.csv implied by resource block at main.tf:2,1-36
+2019/11/19 14:58:11 [TRACE] Context.Input: Input for provider.csv: map[string]cty.Value{}
+2019/11/19 14:58:11 [TRACE] backend/local: running validation operation
+2019/11/19 14:58:11 [INFO] terraform: building graph: GraphTypeValidate
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2019/11/19 14:58:11 [TRACE] ConfigTransformer: Starting for path: 
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+csv_server.mine-server - *terraform.NodeValidatableResource
+------
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.LocalTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.OutputTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.StateTransformer
+2019/11/19 14:58:11 [TRACE] StateTransformer: state is empty, so nothing to do
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2019/11/19 14:58:11 [TRACE] AttachResourceConfigTransformer: attaching to "csv_server.mine-server" (*terraform.NodeValidatableResource) config from main.tf:2,1-36
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+csv_server.mine-server - *terraform.NodeValidatableResource
+------
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2019/11/19 14:58:11 [DEBUG] adding implicit provider configuration provider.csv, implied first by csv_server.mine-server
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer with new graph:
+csv_server.mine-server - *terraform.NodeValidatableResource
+provider.csv - *terraform.NodeApplyableProvider
+------
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2019/11/19 14:58:11 [TRACE] ProviderTransformer: csv_server.mine-server is provided by provider.csv or inherited equivalent
+2019/11/19 14:58:11 [TRACE] ProviderTransformer: exact match for provider.csv serving csv_server.mine-server
+2019/11/19 14:58:11 [DEBUG] ProviderTransformer: "csv_server.mine-server" (*terraform.NodeValidatableResource) needs provider.csv
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+csv_server.mine-server - *terraform.NodeValidatableResource
+  provider.csv - *terraform.NodeApplyableProvider
+provider.csv - *terraform.NodeApplyableProvider
+------
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+csv_server.mine-server - *terraform.NodeValidatableResource
+  provider.csv - *terraform.NodeApplyableProvider
+provider.csv - *terraform.NodeApplyableProvider
+------
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2019/11/19 14:58:11 [TRACE] AttachSchemaTransformer: attaching resource schema to csv_server.mine-server
+2019/11/19 14:58:11 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.csv
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2019/11/19 14:58:11 [DEBUG] ReferenceTransformer: "csv_server.mine-server" references: []
+2019/11/19 14:58:11 [DEBUG] ReferenceTransformer: "provider.csv" references: []
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+csv_server.mine-server - *terraform.NodeValidatableResource
+  provider.csv - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  csv_server.mine-server - *terraform.NodeValidatableResource
+  provider.csv - *terraform.NodeApplyableProvider
+provider.csv - *terraform.NodeApplyableProvider
+------
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+csv_server.mine-server - *terraform.NodeValidatableResource
+  provider.csv - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  csv_server.mine-server - *terraform.NodeValidatableResource
+  provider.csv - *terraform.NodeApplyableProvider
+provider.csv - *terraform.NodeApplyableProvider
+provider.csv (close) - *terraform.graphNodeCloseProvider
+  csv_server.mine-server - *terraform.NodeValidatableResource
+  provider.csv - *terraform.NodeApplyableProvider
+------
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.RootTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+csv_server.mine-server - *terraform.NodeValidatableResource
+  provider.csv - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  csv_server.mine-server - *terraform.NodeValidatableResource
+  provider.csv - *terraform.NodeApplyableProvider
+provider.csv - *terraform.NodeApplyableProvider
+provider.csv (close) - *terraform.graphNodeCloseProvider
+  csv_server.mine-server - *terraform.NodeValidatableResource
+  provider.csv - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.csv (close) - *terraform.graphNodeCloseProvider
+------
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+csv_server.mine-server - *terraform.NodeValidatableResource
+  provider.csv - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  csv_server.mine-server - *terraform.NodeValidatableResource
+provider.csv - *terraform.NodeApplyableProvider
+provider.csv (close) - *terraform.graphNodeCloseProvider
+  csv_server.mine-server - *terraform.NodeValidatableResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.csv (close) - *terraform.graphNodeCloseProvider
+------
+2019/11/19 14:58:11 [DEBUG] Starting graph walk: walkValidate
+2019/11/19 14:58:11 [TRACE] dag/walk: updating graph
+2019/11/19 14:58:11 [TRACE] dag/walk: added new vertex: "csv_server.mine-server"
+2019/11/19 14:58:11 [TRACE] dag/walk: added new vertex: "provider.csv"
+2019/11/19 14:58:11 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2019/11/19 14:58:11 [TRACE] dag/walk: added new vertex: "provider.csv (close)"
+2019/11/19 14:58:11 [TRACE] dag/walk: added new vertex: "root"
+2019/11/19 14:58:11 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2019/11/19 14:58:11 [TRACE] dag/walk: added edge: "root" waiting on "provider.csv (close)"
+2019/11/19 14:58:11 [TRACE] dag/walk: added edge: "csv_server.mine-server" waiting on "provider.csv"
+2019/11/19 14:58:11 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "csv_server.mine-server"
+2019/11/19 14:58:11 [TRACE] dag/walk: added edge: "provider.csv (close)" waiting on "csv_server.mine-server"
+2019/11/19 14:58:11 [TRACE] dag/walk: dependencies changed for "csv_server.mine-server", sending new deps
+2019/11/19 14:58:11 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2019/11/19 14:58:11 [TRACE] dag/walk: dependencies changed for "provider.csv (close)", sending new deps
+2019/11/19 14:58:11 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2019/11/19 14:58:11 [TRACE] dag/walk: visiting "provider.csv"
+2019/11/19 14:58:11 [TRACE] vertex "provider.csv": starting visit (*terraform.NodeApplyableProvider)
+2019/11/19 14:58:11 [TRACE] vertex "provider.csv": evaluating
+2019/11/19 14:58:11 [TRACE] [walkValidate] Entering eval tree: provider.csv
+2019/11/19 14:58:11 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/11/19 14:58:11 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2019-11-19T14:58:11.336+0530 [INFO]  plugin: configuring client automatic mTLS
+2019-11-19T14:58:11.364+0530 [DEBUG] plugin: starting plugin: path=D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe args=[D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe]
+2019-11-19T14:58:11.367+0530 [DEBUG] plugin: plugin started: path=D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe pid=15084
+2019-11-19T14:58:11.367+0530 [DEBUG] plugin: waiting for RPC address: path=D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe
+2019-11-19T14:58:11.859+0530 [INFO]  plugin.terraform-provider-csv.exe: configuring server automatic mTLS: timestamp=2019-11-19T14:58:11.857+0530
+2019-11-19T14:58:11.918+0530 [DEBUG] plugin: using plugin: version=5
+2019-11-19T14:58:11.918+0530 [DEBUG] plugin.terraform-provider-csv.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2019-11-19T14:58:11.917+0530
+2019/11/19 14:58:11 [TRACE] BuiltinEvalContext: Initialized "csv" provider for provider.csv
+2019/11/19 14:58:11 [TRACE] <root>: eval: terraform.EvalNoop
+2019/11/19 14:58:11 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/11/19 14:58:11 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/11/19 14:58:11 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/11/19 14:58:11 [TRACE] <root>: eval: *terraform.EvalValidateProvider
+2019/11/19 14:58:11 [TRACE] buildProviderConfig for provider.csv: no configuration at all
+2019/11/19 14:58:11 [TRACE] GRPCProvider: GetSchema
+2019/11/19 14:58:11 [TRACE] GRPCProvider: PrepareProviderConfig
+2019/11/19 14:58:11 [TRACE] <root>: eval: terraform.EvalNoop
+2019/11/19 14:58:11 [TRACE] <root>: eval: terraform.EvalNoop
+2019/11/19 14:58:11 [TRACE] [walkValidate] Exiting eval tree: provider.csv
+2019/11/19 14:58:11 [TRACE] vertex "provider.csv": visit complete
+2019/11/19 14:58:11 [TRACE] dag/walk: visiting "csv_server.mine-server"
+2019/11/19 14:58:11 [TRACE] vertex "csv_server.mine-server": starting visit (*terraform.NodeValidatableResource)
+2019/11/19 14:58:11 [TRACE] vertex "csv_server.mine-server": evaluating
+2019/11/19 14:58:11 [TRACE] [walkValidate] Entering eval tree: csv_server.mine-server
+2019/11/19 14:58:11 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/11/19 14:58:11 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/11/19 14:58:11 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2019/11/19 14:58:11 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2019/11/19 14:58:11 [TRACE] [walkValidate] Exiting eval tree: csv_server.mine-server
+2019/11/19 14:58:11 [TRACE] vertex "csv_server.mine-server": visit complete
+2019/11/19 14:58:11 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2019/11/19 14:58:11 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2019/11/19 14:58:11 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2019/11/19 14:58:11 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (EachMode fixup)
+2019/11/19 14:58:11 [TRACE] <root>: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2019/11/19 14:58:11 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2019/11/19 14:58:11 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2019/11/19 14:58:11 [TRACE] dag/walk: visiting "provider.csv (close)"
+2019/11/19 14:58:11 [TRACE] vertex "provider.csv (close)": starting visit (*terraform.graphNodeCloseProvider)
+2019/11/19 14:58:11 [TRACE] vertex "provider.csv (close)": evaluating
+2019/11/19 14:58:11 [TRACE] [walkValidate] Entering eval tree: provider.csv (close)
+2019/11/19 14:58:11 [TRACE] <root>: eval: *terraform.EvalCloseProvider
+2019/11/19 14:58:11 [TRACE] GRPCProvider: Close
+2019-11-19T14:58:11.997+0530 [DEBUG] plugin: plugin process exited: path=D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe pid=15084
+2019-11-19T14:58:11.997+0530 [DEBUG] plugin: plugin exited
+2019/11/19 14:58:11 [TRACE] [walkValidate] Exiting eval tree: provider.csv (close)
+2019/11/19 14:58:11 [TRACE] vertex "provider.csv (close)": visit complete
+2019/11/19 14:58:11 [TRACE] dag/walk: visiting "root"
+2019/11/19 14:58:11 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2019/11/19 14:58:11 [TRACE] vertex "root": visit complete
+2019/11/19 14:58:11 [INFO] backend/local: apply calling Refresh
+2019/11/19 14:58:11 [INFO] terraform: building graph: GraphTypeRefresh
+2019/11/19 14:58:11 [TRACE] No managed resources in state during refresh; skipping managed resource transformer
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2019/11/19 14:58:11 [TRACE] ConfigTransformer: Starting for path: 
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.ConfigTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.StateTransformer
+2019/11/19 14:58:11 [TRACE] StateTransformer: state is empty, so nothing to do
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.LocalTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.OutputTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.graphTransformerMulti (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.CloseProviderTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.RootTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+root - terraform.graphNodeRoot
+------
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer (no changes)
+2019/11/19 14:58:11 [DEBUG] Starting graph walk: walkRefresh
+2019/11/19 14:58:11 [TRACE] dag/walk: updating graph
+2019/11/19 14:58:11 [TRACE] dag/walk: added new vertex: "root"
+2019/11/19 14:58:11 [TRACE] dag/walk: visiting "root"
+2019/11/19 14:58:11 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2019/11/19 14:58:11 [TRACE] vertex "root": visit complete
+2019/11/19 14:58:11 [INFO] backend/local: apply calling Plan
+2019/11/19 14:58:11 [INFO] terraform: building graph: GraphTypePlan
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2019/11/19 14:58:11 [TRACE] ConfigTransformer: Starting for path: 
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+csv_server.mine-server - *terraform.NodePlannableResource
+------
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.LocalTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.OutputTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.StateTransformer
+2019/11/19 14:58:11 [TRACE] StateTransformer: state is empty, so nothing to do
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2019/11/19 14:58:11 [TRACE] AttachResourceConfigTransformer: attaching to "csv_server.mine-server" (*terraform.NodePlannableResource) config from main.tf:2,1-36
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+csv_server.mine-server - *terraform.NodePlannableResource
+------
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2019/11/19 14:58:11 [DEBUG] adding implicit provider configuration provider.csv, implied first by csv_server.mine-server
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer with new graph:
+csv_server.mine-server - *terraform.NodePlannableResource
+provider.csv - *terraform.NodeApplyableProvider
+------
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2019/11/19 14:58:11 [TRACE] ProviderTransformer: csv_server.mine-server is provided by provider.csv or inherited equivalent
+2019/11/19 14:58:11 [TRACE] ProviderTransformer: exact match for provider.csv serving csv_server.mine-server
+2019/11/19 14:58:11 [DEBUG] ProviderTransformer: "csv_server.mine-server" (*terraform.NodePlannableResource) needs provider.csv
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+csv_server.mine-server - *terraform.NodePlannableResource
+  provider.csv - *terraform.NodeApplyableProvider
+provider.csv - *terraform.NodeApplyableProvider
+------
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2019/11/19 14:58:11 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+csv_server.mine-server - *terraform.NodePlannableResource
+  provider.csv - *terraform.NodeApplyableProvider
+provider.csv - *terraform.NodeApplyableProvider
+------
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2019/11/19 14:58:11 [TRACE] AttachSchemaTransformer: attaching resource schema to csv_server.mine-server
+2019/11/19 14:58:11 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.csv
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2019/11/19 14:58:11 [DEBUG] ReferenceTransformer: "csv_server.mine-server" references: []
+2019/11/19 14:58:11 [DEBUG] ReferenceTransformer: "provider.csv" references: []
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+csv_server.mine-server - *terraform.NodePlannableResource
+  provider.csv - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  csv_server.mine-server - *terraform.NodePlannableResource
+  provider.csv - *terraform.NodeApplyableProvider
+provider.csv - *terraform.NodeApplyableProvider
+------
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2019/11/19 14:58:11 [TRACE] ForcedCBDTransformer: "csv_server.mine-server" (*terraform.NodePlannableResource) has no CBD descendent, so skipping
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+csv_server.mine-server - *terraform.NodePlannableResource
+  provider.csv - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  csv_server.mine-server - *terraform.NodePlannableResource
+  provider.csv - *terraform.NodeApplyableProvider
+provider.csv - *terraform.NodeApplyableProvider
+provider.csv (close) - *terraform.graphNodeCloseProvider
+  csv_server.mine-server - *terraform.NodePlannableResource
+  provider.csv - *terraform.NodeApplyableProvider
+------
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.RootTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+csv_server.mine-server - *terraform.NodePlannableResource
+  provider.csv - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  csv_server.mine-server - *terraform.NodePlannableResource
+  provider.csv - *terraform.NodeApplyableProvider
+provider.csv - *terraform.NodeApplyableProvider
+provider.csv (close) - *terraform.graphNodeCloseProvider
+  csv_server.mine-server - *terraform.NodePlannableResource
+  provider.csv - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.csv (close) - *terraform.graphNodeCloseProvider
+------
+2019/11/19 14:58:11 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2019/11/19 14:58:11 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+csv_server.mine-server - *terraform.NodePlannableResource
+  provider.csv - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  csv_server.mine-server - *terraform.NodePlannableResource
+provider.csv - *terraform.NodeApplyableProvider
+provider.csv (close) - *terraform.graphNodeCloseProvider
+  csv_server.mine-server - *terraform.NodePlannableResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.csv (close) - *terraform.graphNodeCloseProvider
+------
+2019/11/19 14:58:11 [DEBUG] Starting graph walk: walkPlan
+2019/11/19 14:58:11 [TRACE] dag/walk: updating graph
+2019/11/19 14:58:11 [TRACE] dag/walk: added new vertex: "root"
+2019/11/19 14:58:11 [TRACE] dag/walk: added new vertex: "csv_server.mine-server"
+2019/11/19 14:58:11 [TRACE] dag/walk: added new vertex: "provider.csv"
+2019/11/19 14:58:11 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2019/11/19 14:58:11 [TRACE] dag/walk: added new vertex: "provider.csv (close)"
+2019/11/19 14:58:11 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "csv_server.mine-server"
+2019/11/19 14:58:11 [TRACE] dag/walk: added edge: "provider.csv (close)" waiting on "csv_server.mine-server"
+2019/11/19 14:58:11 [TRACE] dag/walk: added edge: "root" waiting on "provider.csv (close)"
+2019/11/19 14:58:11 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2019/11/19 14:58:11 [TRACE] dag/walk: added edge: "csv_server.mine-server" waiting on "provider.csv"
+2019/11/19 14:58:11 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2019/11/19 14:58:11 [TRACE] dag/walk: dependencies changed for "provider.csv (close)", sending new deps
+2019/11/19 14:58:11 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2019/11/19 14:58:11 [TRACE] dag/walk: dependencies changed for "csv_server.mine-server", sending new deps
+2019/11/19 14:58:11 [TRACE] dag/walk: visiting "provider.csv"
+2019/11/19 14:58:11 [TRACE] vertex "provider.csv": starting visit (*terraform.NodeApplyableProvider)
+2019/11/19 14:58:11 [TRACE] vertex "provider.csv": evaluating
+2019/11/19 14:58:11 [TRACE] [walkPlan] Entering eval tree: provider.csv
+2019/11/19 14:58:11 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/11/19 14:58:11 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2019-11-19T14:58:11.998+0530 [INFO]  plugin: configuring client automatic mTLS
+2019-11-19T14:58:12.018+0530 [DEBUG] plugin: starting plugin: path=D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe args=[D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe]
+2019-11-19T14:58:12.021+0530 [DEBUG] plugin: plugin started: path=D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe pid=18872
+2019-11-19T14:58:12.021+0530 [DEBUG] plugin: waiting for RPC address: path=D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe
+2019-11-19T14:58:12.585+0530 [INFO]  plugin.terraform-provider-csv.exe: configuring server automatic mTLS: timestamp=2019-11-19T14:58:12.583+0530
+2019-11-19T14:58:12.634+0530 [DEBUG] plugin.terraform-provider-csv.exe: plugin address: network=tcp address=127.0.0.1:10000 timestamp=2019-11-19T14:58:12.634+0530
+2019-11-19T14:58:12.634+0530 [DEBUG] plugin: using plugin: version=5
+2019/11/19 14:58:12 [TRACE] BuiltinEvalContext: Initialized "csv" provider for provider.csv
+2019/11/19 14:58:12 [TRACE] <root>: eval: terraform.EvalNoop
+2019/11/19 14:58:12 [TRACE] <root>: eval: terraform.EvalNoop
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalConfigProvider
+2019/11/19 14:58:12 [TRACE] buildProviderConfig for provider.csv: no configuration at all
+2019/11/19 14:58:12 [TRACE] GRPCProvider: GetSchema
+2019/11/19 14:58:12 [TRACE] GRPCProvider: Configure
+2019/11/19 14:58:12 [TRACE] [walkPlan] Exiting eval tree: provider.csv
+2019/11/19 14:58:12 [TRACE] vertex "provider.csv": visit complete
+2019/11/19 14:58:12 [TRACE] dag/walk: visiting "csv_server.mine-server"
+2019/11/19 14:58:12 [TRACE] vertex "csv_server.mine-server": starting visit (*terraform.NodePlannableResource)
+2019/11/19 14:58:12 [TRACE] vertex "csv_server.mine-server": evaluating
+2019/11/19 14:58:12 [TRACE] [walkPlan] Entering eval tree: csv_server.mine-server
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
+2019/11/19 14:58:12 [TRACE] [walkPlan] Exiting eval tree: csv_server.mine-server
+2019/11/19 14:58:12 [TRACE] vertex "csv_server.mine-server": expanding dynamic subgraph
+2019/11/19 14:58:12 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2019/11/19 14:58:12 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+csv_server.mine-server - *terraform.NodePlannableResourceInstance
+------
+2019/11/19 14:58:12 [TRACE] Executing graph transform *terraform.OrphanResourceCountTransformer
+2019/11/19 14:58:12 [TRACE] Completed graph transform *terraform.OrphanResourceCountTransformer (no changes)
+2019/11/19 14:58:12 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2019/11/19 14:58:12 [DEBUG] Resource instance state not found for node "csv_server.mine-server", instance csv_server.mine-server
+2019/11/19 14:58:12 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2019/11/19 14:58:12 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2019/11/19 14:58:12 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2019/11/19 14:58:12 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2019/11/19 14:58:12 [DEBUG] ReferenceTransformer: "csv_server.mine-server" references: []
+2019/11/19 14:58:12 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2019/11/19 14:58:12 [TRACE] Executing graph transform *terraform.RootTransformer
+2019/11/19 14:58:12 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2019/11/19 14:58:12 [TRACE] vertex "csv_server.mine-server": entering dynamic subgraph
+2019/11/19 14:58:12 [TRACE] dag/walk: updating graph
+2019/11/19 14:58:12 [TRACE] dag/walk: added new vertex: "csv_server.mine-server"
+2019/11/19 14:58:12 [TRACE] dag/walk: visiting "csv_server.mine-server"
+2019/11/19 14:58:12 [TRACE] vertex "csv_server.mine-server": starting visit (*terraform.NodePlannableResourceInstance)
+2019/11/19 14:58:12 [TRACE] vertex "csv_server.mine-server": evaluating
+2019/11/19 14:58:12 [TRACE] [walkPlan] Entering eval tree: csv_server.mine-server
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalReadState
+2019/11/19 14:58:12 [TRACE] EvalReadState: reading state for csv_server.mine-server
+2019/11/19 14:58:12 [TRACE] EvalReadState: no state present for csv_server.mine-server
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalValidateSelfRef
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalDiff
+2019/11/19 14:58:12 [TRACE] Re-validating config for "csv_server.mine-server"
+2019/11/19 14:58:12 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2019/11/19 14:58:12 [TRACE] GRPCProvider: PlanResourceChange
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalCheckPreventDestroy
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalWriteState
+2019/11/19 14:58:12 [TRACE] EvalWriteState: writing current state object for csv_server.mine-server
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2019/11/19 14:58:12 [TRACE] EvalWriteDiff: recorded Create change for csv_server.mine-server
+2019/11/19 14:58:12 [TRACE] [walkPlan] Exiting eval tree: csv_server.mine-server
+2019/11/19 14:58:12 [TRACE] vertex "csv_server.mine-server": visit complete
+2019/11/19 14:58:12 [TRACE] vertex "csv_server.mine-server": dynamic subgraph completed successfully
+2019/11/19 14:58:12 [TRACE] vertex "csv_server.mine-server": visit complete
+2019/11/19 14:58:12 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2019/11/19 14:58:12 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2019/11/19 14:58:12 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2019/11/19 14:58:12 [TRACE] [walkPlan] Entering eval tree: meta.count-boundary (EachMode fixup)
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2019/11/19 14:58:12 [TRACE] dag/walk: visiting "provider.csv (close)"
+2019/11/19 14:58:12 [TRACE] [walkPlan] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2019/11/19 14:58:12 [TRACE] vertex "provider.csv (close)": starting visit (*terraform.graphNodeCloseProvider)
+2019/11/19 14:58:12 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2019/11/19 14:58:12 [TRACE] vertex "provider.csv (close)": evaluating
+2019/11/19 14:58:12 [TRACE] [walkPlan] Entering eval tree: provider.csv (close)
+2019/11/19 14:58:12 [TRACE] <root>: eval: *terraform.EvalCloseProvider
+2019/11/19 14:58:12 [TRACE] GRPCProvider: Close
+2019-11-19T14:58:12.724+0530 [DEBUG] plugin: plugin process exited: path=D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe pid=18872
+2019-11-19T14:58:12.724+0530 [DEBUG] plugin: plugin exited
+2019/11/19 14:58:12 [TRACE] [walkPlan] Exiting eval tree: provider.csv (close)
+2019/11/19 14:58:12 [TRACE] vertex "provider.csv (close)": visit complete
+2019/11/19 14:58:12 [TRACE] dag/walk: visiting "root"
+2019/11/19 14:58:12 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2019/11/19 14:58:12 [TRACE] vertex "root": visit complete
+2019/11/19 14:58:12 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+2019/11/19 14:58:15 [INFO] backend/local: apply calling Apply
+2019/11/19 14:58:15 [INFO] terraform: building graph: GraphTypeApply
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2019/11/19 14:58:15 [TRACE] ConfigTransformer: Starting for path: 
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+------
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.DiffTransformer
+2019/11/19 14:58:15 [TRACE] DiffTransformer starting
+2019/11/19 14:58:15 [TRACE] DiffTransformer: found Create change for csv_server.mine-server 
+2019/11/19 14:58:15 [TRACE] DiffTransformer: csv_server.mine-server will be represented by csv_server.mine-server
+2019/11/19 14:58:15 [TRACE] DiffTransformer complete
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.DiffTransformer with new graph:
+csv_server.mine-server - *terraform.NodeApplyableResourceInstance
+  csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+------
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.OrphanResourceTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.OrphanResourceTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2019/11/19 14:58:15 [TRACE] AttachResourceConfigTransformer: attaching to "csv_server.mine-server (prepare state)" (*terraform.NodeApplyableResource) config from main.tf:2,1-36
+2019/11/19 14:58:15 [TRACE] AttachResourceConfigTransformer: attaching to "csv_server.mine-server" (*terraform.NodeApplyableResourceInstance) config from main.tf:2,1-36
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2019/11/19 14:58:15 [DEBUG] Resource state not found for node "csv_server.mine-server", instance csv_server.mine-server
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.LocalTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.OutputTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2019/11/19 14:58:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2019/11/19 14:58:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+csv_server.mine-server - *terraform.NodeApplyableResourceInstance
+  csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+------
+2019/11/19 14:58:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2019/11/19 14:58:15 [DEBUG] adding implicit provider configuration provider.csv, implied first by csv_server.mine-server (prepare state)
+2019/11/19 14:58:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer with new graph:
+csv_server.mine-server - *terraform.NodeApplyableResourceInstance
+  csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+provider.csv - *terraform.NodeApplyableProvider
+------
+2019/11/19 14:58:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2019/11/19 14:58:15 [TRACE] ProviderTransformer: csv_server.mine-server (prepare state) is provided by provider.csv or inherited equivalent
+2019/11/19 14:58:15 [TRACE] ProviderTransformer: csv_server.mine-server is provided by provider.csv or inherited equivalent
+2019/11/19 14:58:15 [TRACE] ProviderTransformer: exact match for provider.csv serving csv_server.mine-server
+2019/11/19 14:58:15 [DEBUG] ProviderTransformer: "csv_server.mine-server" (*terraform.NodeApplyableResourceInstance) needs provider.csv
+2019/11/19 14:58:15 [TRACE] ProviderTransformer: exact match for provider.csv serving csv_server.mine-server (prepare state)
+2019/11/19 14:58:15 [DEBUG] ProviderTransformer: "csv_server.mine-server (prepare state)" (*terraform.NodeApplyableResource) needs provider.csv
+2019/11/19 14:58:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+csv_server.mine-server - *terraform.NodeApplyableResourceInstance
+  csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+  provider.csv - *terraform.NodeApplyableProvider
+csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+  provider.csv - *terraform.NodeApplyableProvider
+provider.csv - *terraform.NodeApplyableProvider
+------
+2019/11/19 14:58:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2019/11/19 14:58:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2019/11/19 14:58:15 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+csv_server.mine-server - *terraform.NodeApplyableResourceInstance
+  csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+  provider.csv - *terraform.NodeApplyableProvider
+csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+  provider.csv - *terraform.NodeApplyableProvider
+provider.csv - *terraform.NodeApplyableProvider
+------
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2019/11/19 14:58:15 [TRACE] AttachSchemaTransformer: attaching resource schema to csv_server.mine-server (prepare state)
+2019/11/19 14:58:15 [TRACE] AttachSchemaTransformer: attaching resource schema to csv_server.mine-server
+2019/11/19 14:58:15 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.csv
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2019/11/19 14:58:15 [DEBUG] ReferenceTransformer: "csv_server.mine-server (prepare state)" references: []
+2019/11/19 14:58:15 [DEBUG] ReferenceTransformer: "csv_server.mine-server" references: []
+2019/11/19 14:58:15 [DEBUG] ReferenceTransformer: "provider.csv" references: []
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.CBDEdgeTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+csv_server.mine-server - *terraform.NodeApplyableResourceInstance
+  csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+  provider.csv - *terraform.NodeApplyableProvider
+csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+  provider.csv - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  csv_server.mine-server - *terraform.NodeApplyableResourceInstance
+  csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+  provider.csv - *terraform.NodeApplyableProvider
+provider.csv - *terraform.NodeApplyableProvider
+------
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+csv_server.mine-server - *terraform.NodeApplyableResourceInstance
+  csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+  provider.csv - *terraform.NodeApplyableProvider
+csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+  provider.csv - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  csv_server.mine-server - *terraform.NodeApplyableResourceInstance
+  csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+  provider.csv - *terraform.NodeApplyableProvider
+provider.csv - *terraform.NodeApplyableProvider
+provider.csv (close) - *terraform.graphNodeCloseProvider
+  csv_server.mine-server - *terraform.NodeApplyableResourceInstance
+  csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+  provider.csv - *terraform.NodeApplyableProvider
+------
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.RootTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+csv_server.mine-server - *terraform.NodeApplyableResourceInstance
+  csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+  provider.csv - *terraform.NodeApplyableProvider
+csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+  provider.csv - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  csv_server.mine-server - *terraform.NodeApplyableResourceInstance
+  csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+  provider.csv - *terraform.NodeApplyableProvider
+provider.csv - *terraform.NodeApplyableProvider
+provider.csv (close) - *terraform.graphNodeCloseProvider
+  csv_server.mine-server - *terraform.NodeApplyableResourceInstance
+  csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+  provider.csv - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.csv (close) - *terraform.graphNodeCloseProvider
+------
+2019/11/19 14:58:15 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2019/11/19 14:58:15 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+csv_server.mine-server - *terraform.NodeApplyableResourceInstance
+  csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+csv_server.mine-server (prepare state) - *terraform.NodeApplyableResource
+  provider.csv - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  csv_server.mine-server - *terraform.NodeApplyableResourceInstance
+provider.csv - *terraform.NodeApplyableProvider
+provider.csv (close) - *terraform.graphNodeCloseProvider
+  csv_server.mine-server - *terraform.NodeApplyableResourceInstance
+root - terraform.graphNodeRoot
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.csv (close) - *terraform.graphNodeCloseProvider
+------
+2019/11/19 14:58:15 [DEBUG] Starting graph walk: walkApply
+2019/11/19 14:58:15 [TRACE] dag/walk: updating graph
+2019/11/19 14:58:15 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2019/11/19 14:58:15 [TRACE] dag/walk: added new vertex: "provider.csv (close)"
+2019/11/19 14:58:15 [TRACE] dag/walk: added new vertex: "root"
+2019/11/19 14:58:15 [TRACE] dag/walk: added new vertex: "csv_server.mine-server (prepare state)"
+2019/11/19 14:58:15 [TRACE] dag/walk: added new vertex: "csv_server.mine-server"
+2019/11/19 14:58:15 [TRACE] dag/walk: added new vertex: "provider.csv"
+2019/11/19 14:58:15 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "csv_server.mine-server"
+2019/11/19 14:58:15 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2019/11/19 14:58:15 [TRACE] dag/walk: added edge: "csv_server.mine-server" waiting on "csv_server.mine-server (prepare state)"
+2019/11/19 14:58:15 [TRACE] dag/walk: added edge: "provider.csv (close)" waiting on "csv_server.mine-server"
+2019/11/19 14:58:15 [TRACE] dag/walk: added edge: "root" waiting on "provider.csv (close)"
+2019/11/19 14:58:15 [TRACE] dag/walk: added edge: "csv_server.mine-server (prepare state)" waiting on "provider.csv"
+2019/11/19 14:58:15 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2019/11/19 14:58:15 [TRACE] dag/walk: dependencies changed for "csv_server.mine-server", sending new deps
+2019/11/19 14:58:15 [TRACE] dag/walk: dependencies changed for "provider.csv (close)", sending new deps
+2019/11/19 14:58:15 [TRACE] dag/walk: dependencies changed for "csv_server.mine-server (prepare state)", sending new deps
+2019/11/19 14:58:15 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2019/11/19 14:58:15 [TRACE] dag/walk: visiting "provider.csv"
+2019/11/19 14:58:15 [TRACE] vertex "provider.csv": starting visit (*terraform.NodeApplyableProvider)
+2019/11/19 14:58:15 [TRACE] vertex "provider.csv": evaluating
+2019/11/19 14:58:15 [TRACE] [walkApply] Entering eval tree: provider.csv
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2019-11-19T14:58:15.183+0530 [INFO]  plugin: configuring client automatic mTLS
+2019-11-19T14:58:15.231+0530 [DEBUG] plugin: starting plugin: path=D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe args=[D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe]
+2019-11-19T14:58:15.238+0530 [DEBUG] plugin: plugin started: path=D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe pid=3164
+2019-11-19T14:58:15.238+0530 [DEBUG] plugin: waiting for RPC address: path=D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe
+2019-11-19T14:58:15.805+0530 [INFO]  plugin.terraform-provider-csv.exe: configuring server automatic mTLS: timestamp=2019-11-19T14:58:15.804+0530
+2019-11-19T14:58:15.831+0530 [DEBUG] plugin: using plugin: version=5
+2019-11-19T14:58:15.831+0530 [DEBUG] plugin.terraform-provider-csv.exe: plugin address: network=tcp address=127.0.0.1:10000 timestamp=2019-11-19T14:58:15.831+0530
+2019/11/19 14:58:15 [TRACE] BuiltinEvalContext: Initialized "csv" provider for provider.csv
+2019/11/19 14:58:15 [TRACE] <root>: eval: terraform.EvalNoop
+2019/11/19 14:58:15 [TRACE] <root>: eval: terraform.EvalNoop
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalConfigProvider
+2019/11/19 14:58:15 [TRACE] buildProviderConfig for provider.csv: no configuration at all
+2019/11/19 14:58:15 [TRACE] GRPCProvider: GetSchema
+2019/11/19 14:58:15 [TRACE] GRPCProvider: Configure
+2019/11/19 14:58:15 [TRACE] [walkApply] Exiting eval tree: provider.csv
+2019/11/19 14:58:15 [TRACE] vertex "provider.csv": visit complete
+2019/11/19 14:58:15 [TRACE] dag/walk: visiting "csv_server.mine-server (prepare state)"
+2019/11/19 14:58:15 [TRACE] vertex "csv_server.mine-server (prepare state)": starting visit (*terraform.NodeApplyableResource)
+2019/11/19 14:58:15 [TRACE] vertex "csv_server.mine-server (prepare state)": evaluating
+2019/11/19 14:58:15 [TRACE] [walkApply] Entering eval tree: csv_server.mine-server (prepare state)
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
+2019/11/19 14:58:15 [TRACE] [walkApply] Exiting eval tree: csv_server.mine-server (prepare state)
+2019/11/19 14:58:15 [TRACE] vertex "csv_server.mine-server (prepare state)": visit complete
+2019/11/19 14:58:15 [TRACE] dag/walk: visiting "csv_server.mine-server"
+2019/11/19 14:58:15 [TRACE] vertex "csv_server.mine-server": starting visit (*terraform.NodeApplyableResourceInstance)
+2019/11/19 14:58:15 [TRACE] vertex "csv_server.mine-server": evaluating
+2019/11/19 14:58:15 [TRACE] [walkApply] Entering eval tree: csv_server.mine-server
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2019/11/19 14:58:15 [TRACE] EvalReadDiff: Read Create change from plan for csv_server.mine-server
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalIf
+2019/11/19 14:58:15 [TRACE] <root>: eval: terraform.EvalNoop
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalIf
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalReadState
+2019/11/19 14:58:15 [TRACE] EvalReadState: reading state for csv_server.mine-server
+2019/11/19 14:58:15 [TRACE] EvalReadState: no state present for csv_server.mine-server
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2019/11/19 14:58:15 [TRACE] EvalReadDiff: Read Create change from plan for csv_server.mine-server
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalDiff
+2019/11/19 14:58:15 [TRACE] Re-validating config for "csv_server.mine-server"
+2019/11/19 14:58:15 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2019/11/19 14:58:15 [TRACE] GRPCProvider: PlanResourceChange
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalCheckPlannedChange
+2019/11/19 14:58:15 [TRACE] EvalCheckPlannedChange: Verifying that actual change (action Create) matches planned change (action Create)
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalReadState
+2019/11/19 14:58:15 [TRACE] EvalReadState: reading state for csv_server.mine-server
+2019/11/19 14:58:15 [TRACE] EvalReadState: no state present for csv_server.mine-server
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalReduceDiff
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalIf
+2019/11/19 14:58:15 [TRACE] <root>: eval: terraform.EvalNoop
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalApplyPre
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalApply
+2019/11/19 14:58:15 [DEBUG] csv_server.mine-server: applying the planned Create change
+2019/11/19 14:58:15 [TRACE] GRPCProvider: ApplyResourceChange
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: panic: interface conversion: interface {} is nil, not string
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: 
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: goroutine 39 [running]:
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: main.resourceCreate(0xc0002c4930, 0x0, 0x0, 0x2, 0x1bb39c0)
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: 	D:/go_workspace/src/github.com/terraform-provider-csv/resource_server.go:64 +0x78e
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: github.com/hashicorp/terraform/helper/schema.(*Resource).Apply(0xc000112180, 0xc0000bc7d0, 0xc000079060, 0x0, 0x0, 0xc0005a0c01, 0xc00016ac08, 0xf122c0)
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: 	D:/go_workspace/src/github.com/hashicorp/terraform/helper/schema/resource.go:305 +0x3bb
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: github.com/hashicorp/terraform/helper/schema.(*Provider).Apply(0xc000112200, 0xc0005aba30, 0xc0000bc7d0, 0xc000079060, 0xc00016d048, 0xc0000060c0, 0xf142a0)
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: 	D:/go_workspace/src/github.com/hashicorp/terraform/helper/schema/provider.go:289 +0x196
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: github.com/hashicorp/terraform/helper/plugin.(*GRPCProviderServer).ApplyResourceChange(0xc0000ac580, 0x13374c0, 0xc0005a0000, 0xc0000fe5a0, 0xc0000ac580, 0xc0005a0000, 0xc000213ba8)
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: 	D:/go_workspace/src/github.com/hashicorp/terraform/helper/plugin/grpc_provider.go:885 +0x89b
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: github.com/hashicorp/terraform/internal/tfplugin5._Provider_ApplyResourceChange_Handler(0x103a6a0, 0xc0000ac580, 0x13374c0, 0xc0005a0000, 0xc0000bc320, 0x0, 0x13374c0, 0xc0005a0000, 0xc00059e000, 0xa7)
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: 	D:/go_workspace/src/github.com/hashicorp/terraform/internal/tfplugin5/tfplugin5.pb.go:3189 +0x245
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: github.com/hashicorp/terraform/vendor/google.golang.org/grpc.(*Server).processUnaryRPC(0xc000506600, 0x1342740, 0xc000506f00, 0xc00012c700, 0xc0001367e0, 0x1b8a4e0, 0x0, 0x0, 0x0)
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: 	D:/go_workspace/src/github.com/hashicorp/terraform/vendor/google.golang.org/grpc/server.go:998 +0x477
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: github.com/hashicorp/terraform/vendor/google.golang.org/grpc.(*Server).handleStream(0xc000506600, 0x1342740, 0xc000506f00, 0xc00012c700, 0x0)
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: 	D:/go_workspace/src/github.com/hashicorp/terraform/vendor/google.golang.org/grpc/server.go:1278 +0xdad
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: github.com/hashicorp/terraform/vendor/google.golang.org/grpc.(*Server).serveStreams.func1.1(0xc0000321d0, 0xc000506600, 0x1342740, 0xc000506f00, 0xc00012c700)
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: 	D:/go_workspace/src/github.com/hashicorp/terraform/vendor/google.golang.org/grpc/server.go:717 +0xa6
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: created by github.com/hashicorp/terraform/vendor/google.golang.org/grpc.(*Server).serveStreams.func1
+2019-11-19T14:58:15.888+0530 [DEBUG] plugin.terraform-provider-csv.exe: 	D:/go_workspace/src/github.com/hashicorp/terraform/vendor/google.golang.org/grpc/server.go:715 +0xa8
+2019/11/19 14:58:15 [DEBUG] csv_server.mine-server: apply errored, but we're indicating that via the Error pointer rather than returning it: rpc error: code = Unavailable desc = transport is closing
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
+2019/11/19 14:58:15 [TRACE] EvalMaybeTainted: csv_server.mine-server encountered an error during creation, so it is now marked as tainted
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalWriteState
+2019/11/19 14:58:15 [TRACE] EvalWriteState: removing state object for csv_server.mine-server
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalApplyProvisioners
+2019/11/19 14:58:15 [TRACE] EvalApplyProvisioners: csv_server.mine-server has no state, so skipping provisioners
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
+2019/11/19 14:58:15 [TRACE] EvalMaybeTainted: csv_server.mine-server encountered an error during creation, so it is now marked as tainted
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalWriteState
+2019/11/19 14:58:15 [TRACE] EvalWriteState: removing state object for csv_server.mine-server
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalIf
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalIf
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2019/11/19 14:58:15 [TRACE] <root>: eval: *terraform.EvalApplyPost
+2019/11/19 14:58:15 [ERROR] <root>: eval: *terraform.EvalApplyPost, err: rpc error: code = Unavailable desc = transport is closing
+2019/11/19 14:58:15 [ERROR] <root>: eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2019/11/19 14:58:15 [TRACE] [walkApply] Exiting eval tree: csv_server.mine-server
+2019/11/19 14:58:15 [TRACE] vertex "csv_server.mine-server": visit complete
+2019/11/19 14:58:15 [TRACE] dag/walk: upstream of "provider.csv (close)" errored, so skipping
+2019/11/19 14:58:15 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2019/11/19 14:58:15 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2019/11/19 14:58:15 [TRACE] statemgr.Filesystem: not making a backup, because the new snapshot is identical to the old
+2019/11/19 14:58:15 [TRACE] statemgr.Filesystem: no state changes since last snapshot
+2019/11/19 14:58:15 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2019/11/19 14:58:15 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2019/11/19 14:58:15 [TRACE] statemgr.Filesystem: unlocked by closing terraform.tfstate
+2019-11-19T14:58:15.897+0530 [DEBUG] plugin: plugin process exited: path=D:\go_workspace\src\github.com\terraform-provider-csv\terraform-provider-csv.exe pid=3164 error="exit status 2"
+2019-11-19T14:58:15.897+0530 [DEBUG] plugin: plugin exited
